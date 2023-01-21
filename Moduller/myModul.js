@@ -1,0 +1,3 @@
+exports.instantDate = () => {
+  return Date();
+};
