@@ -21,10 +21,15 @@ http
 
     // metin txt'ye add
 
-    fs.appendFile("./program.txt", "baska dil ekledim", (err) => {
-      if (err) throw err;
-      console.log("Kaydedildi..");
-      res.end();
-    });
+    // fs.appendFile("./program.txt", "baska dil ekledim", (err) => {
+    //   if (err) throw err;
+    //   console.log("Kaydedildi..");
+    //   res.end();
+    // });
+
+    fs.open("mynewdocuments.txt", "w", (err) => {});
+    fs.unlink("mynewdocuments.txt", "w", (err) => {});
+    fs.rename("mynewdocuments.txt", "mynewdocument.txt", (err) => {});
+    
   })
   .listen(8080);
